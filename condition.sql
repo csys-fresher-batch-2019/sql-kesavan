@@ -8,7 +8,7 @@ completedon date,
 status varchar2(15)
 );
 insert into work(emp_id,task,name,completedon)
-values(2000,'Install oracle and oreo and rent','Naresh',to_date('25-12-2019','dd-MM-yyyy'));
+values(2000,'Install oracle','Naresh',to_date('25-12-2019','dd-MM-yyyy'));
 insert into work(emp_id,task,name,completedon)
 values(2003,'Install jdk','Suresh',to_date('28-12-2019','dd-MM-yyyy'));
 insert into  work(emp_id,task,name,completedon)
