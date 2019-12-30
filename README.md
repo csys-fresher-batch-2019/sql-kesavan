@@ -1,5 +1,5 @@
 # GROCERY MANAGEMENT SYSTEM
 
-##FEATURES
-   *
+## FEATURES
+   
    
