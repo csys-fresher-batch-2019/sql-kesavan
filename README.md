@@ -13,7 +13,7 @@ create table products(
  manufacturer varchar2(30),
  quantity_KG float,
  price float not null,
- stock int not null,
+ stock number not null,
  status varchar2(25),
  constraint price_cq check(price>0)
  );
