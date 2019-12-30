@@ -6,12 +6,16 @@
 Query:
 
 ```
+
 create table products(
- productname varchar2(30) not null unique,
- productid int primary key,
+ product_name varchar2(30) not null,
+ product_id number primary key,
  manufacturer varchar2(30),
- price int not null check(price>0),
- quantity_KG float
+ quantity_KG float,
+ price float not null,
+ stock int not null,
+ status varchar2(25),
+ constraint price_cq check(price>0)
  );
   
   
