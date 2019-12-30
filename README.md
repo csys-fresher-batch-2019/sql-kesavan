@@ -7,11 +7,11 @@ Query:
 
 ```
 create table products(
- productname varchar2(30) not null,
+ productname varchar2(30) not null unique,
  productid int primary key,
  manufacturer varchar2(30),
  price int not null check(price>0),
- quantity int
+ quantity_KG float
  );
   
   
