@@ -73,7 +73,7 @@ price_per_item float,
 total_amount float,
 order_date date  not null,
 delivery_date date,
-order_status varchar2(30) default 'Not ordered',
+order_status varchar2(30) default 'NOT ORDERED',
 constraint product_id_fk foreign key(product_id) references products(product_id)
 );
 insert into orderdata(user_id,order_id,product_id,order_date,delivery_date,no_of_items,price_per_item)
@@ -87,7 +87,7 @@ update orderdata
 set total_amount=no_of_items*price_per_item;
 --update order status
 update orderdata
-set order_status='Ordered'
+set order_status='ORDERED'
 where no_of_items>0;
 
 select * from orderdata
@@ -96,7 +96,7 @@ select * from orderdata
 ###  FEATURE 4 CHANGE STOCK VALUE AFTER ORDERED
 
 ```
---alter products table for stock after ordered
+--Alter products table for stock after ordered
 
 update products p
 set p.stock=p.stock-(select o.no_of_items from orderdata o where o.product_id = p.product_id)
@@ -116,7 +116,7 @@ select * from products
 ###  FEATURE 5 CANCEL THE ORDER
 
 ```
---cancel the wholeorder
+--Cancel the wholeorder
 
 update orderdata
 set order_status= 'CANCELLED',total_amount=0,delivery_date=NULL
@@ -125,6 +125,7 @@ select * from orderdata
 
 
 --update products after cancelled
+
 update products p
 set p.stock=p.stock+(select no_of_items from orderdata  where product_id = 231)
 where product_id = 231;
@@ -144,7 +145,7 @@ select * from products;
 ### FEATURE 6 FINALIZE THE ORDERSUMMARY
 
 ```
---view the order summary 
+--View the order summary 
 
 select user_name,order_id,product_name,manufacturer,quantity,no_of_items,total_amount,order_date,delivery_date,delivery_address,order_status from orderdata o
 inner join products p
