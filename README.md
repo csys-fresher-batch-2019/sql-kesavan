@@ -4,8 +4,6 @@
   USER SHOULD ABLE TO BUY GROCERY PRODUCTS
 ### FEATURE 1 LIST THE GROCERY PRODUCTS
 
-Query:
-
 ```
 create table products(
  product_name varchar2(30) not null,
@@ -124,7 +122,7 @@ where order_id=1001;
 select * from orderdata
 
 
---update products after cancelled
+--Update products after cancelled
 
 update products p
 set p.stock=p.stock+(select no_of_items from orderdata  where product_id = 231)
