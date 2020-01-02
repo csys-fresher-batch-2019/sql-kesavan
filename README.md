@@ -52,7 +52,7 @@ create table products(
  ```
  ### FEATURE 2   ADD THE USERDATA
 
-```
+```sql
 --Create userdata
 
 create table usersdata(
@@ -86,7 +86,7 @@ select * from usersdata
 ```
 ### FEATURE 3   PLACE THE ORDER DETAILS
 
-```
+```sql
 
 --Create order details
 
@@ -132,7 +132,7 @@ select * from orderdata
 ```
 ###  FEATURE 4   CHANGE STOCK VALUE AFTER ORDERED
 
-```
+```sql
 --Alter products table for stock after ordered
 
 update products p
@@ -165,7 +165,7 @@ select * from products
 ```
 ###  FEATURE 5   CANCEL THE ORDER
 
-```
+```sql
 --Cancel the order
 
 update orderdata
@@ -216,7 +216,7 @@ select * from products;
 ```
 ### FEATURE 6   FINALIZE THE ORDERSUMMARY
 
-```
+```sql
 --View the order summary 
 
 select user_name,order_id,product_name,manufacturer,quantity,no_of_items,total_amount,order_date,delivery_date,delivery_address,order_status from orderdata o
