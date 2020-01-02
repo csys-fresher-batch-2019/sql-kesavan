@@ -6,7 +6,7 @@
   * USER SHOULD ABLE TO CANCEL THE ORDER
   * USER CAN VIEW THE ORDER SUMMARY
 
-### FEATURE 1 LIST THE GROCERY PRODUCTS
+### FEATURE 1   LIST THE GROCERY PRODUCTS
 
 ```
 create table products(
@@ -38,7 +38,7 @@ create table products(
  select * from products
  
  ```
- ### FEATURE 2 ADD THE USERDATA
+ ### FEATURE 2   ADD THE USERDATA
 
 ```
 --Create userdata
@@ -60,7 +60,7 @@ values(1104,'Ramesh','624,Gandhi nagar Chennai-610045');
 select * from usersdata
 
 ```
-### FEATURE 3 PLACE THE ORDER DETAILS
+### FEATURE 3   PLACE THE ORDER DETAILS
 
 ```
 
@@ -95,7 +95,7 @@ where no_of_items>0;
 select * from orderdata
 
 ```
-###  FEATURE 4 CHANGE STOCK VALUE AFTER ORDERED
+###  FEATURE 4   CHANGE STOCK VALUE AFTER ORDERED
 
 ```
 --Alter products table for stock after ordered
@@ -115,7 +115,7 @@ where stock>0;
 select * from products
 
 ```
-###  FEATURE 5 CANCEL THE ORDER
+###  FEATURE 5   CANCEL THE ORDER
 
 ```
 --Cancel the wholeorder
@@ -144,7 +144,7 @@ where stock<=0;
 select * from products;
 
 ```
-### FEATURE 6 FINALIZE THE ORDERSUMMARY
+### FEATURE 6   FINALIZE THE ORDERSUMMARY
 
 ```
 --View the order summary 
