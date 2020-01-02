@@ -8,7 +8,7 @@
 
 ### FEATURE 1   LIST THE GROCERY PRODUCTS
 
-```
+```sql
 create table products(
  product_name varchar2(30) not null,
  product_id number primary key,
