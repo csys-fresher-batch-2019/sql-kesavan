@@ -35,8 +35,10 @@ create table products(
  
  select * from products
  
+ ```
  ### FEATURE 2 ADD THE USERDATA
 
+```
 --Create userdata
 
 create table usersdata(
@@ -55,8 +57,10 @@ values(1104,'Ramesh','624,Gandhi nagar Chennai-610045');
 
 select * from usersdata
 
+```
 ### FEATURE 3 PLACE THE ORDER DETAILS
 
+```
 
 --Create order details
 
@@ -88,8 +92,10 @@ where no_of_items>0;
 
 select * from orderdata
 
+```
 ###  FEATURE 4 CHANGE STOCK VALUE AFTER ORDERED
 
+```
 --alter products table for stock after ordered
 
 update products p
@@ -106,8 +112,10 @@ set status=' AVAILABLE'
 where stock>0;
 select * from products
 
+```
 ###  FEATURE 5 CANCEL THE ORDER
 
+```
 --cancel the wholeorder
 
 update orderdata
@@ -132,8 +140,10 @@ where stock<=0;
 
 select * from products;
 
+```
 ### FEATURE 6 FINALIZE THE ORDERSUMMARY
 
+```
 --view the order summary 
 
 select user_name,order_id,product_name,manufacturer,quantity,no_of_items,total_amount,order_date,delivery_date,delivery_address,order_status from orderdata o
@@ -142,7 +152,7 @@ on p.product_id=o.product_id
 inner join usersdata u
 on o.user_id=u.user_id and total_amount>0;
 
-
+```
   
   
   ```
