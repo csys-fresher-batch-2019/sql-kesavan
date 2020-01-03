@@ -57,7 +57,7 @@ create table products(
 --Create userdata
 
 create table usersdata(
-user_id number not null unique,
+user_id number primary key,
 user_name varchar2(25) not null,
 delivery_address varchar2(60)
 );
@@ -101,7 +101,8 @@ total_amount float,
 order_date date  not null,
 delivery_date date,
 order_status varchar2(30) default 'NOT ORDERED',
-constraint product_id_fk foreign key(product_id) references products(product_id)
+constraint product_id_fk foreign key(product_id) references products(product_id),
+constraint user_id_fk foreign key(user_id) references userdata(user_id)
 );
 insert into orderdata(user_id,order_id,product_id,order_date,delivery_date,no_of_items,price_per_item)
 values(1101,1001,231,trunc(sysdate),trunc(sysdate+5),5,400);
