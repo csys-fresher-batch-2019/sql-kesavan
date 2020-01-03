@@ -50,7 +50,7 @@ create table products(
 | Coconut oil   | 234        | VVD           | 1        | LTRS | 200   | 100   | AVAILABLE |
 +---------------+------------+---------------+----------+------+-------+-------+-----------+
 
- 
+ ```
   ### FEATURE 2   ADD THE USERDATA
 
 ```sql
