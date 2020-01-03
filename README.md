@@ -11,7 +11,7 @@
 ```sql
 create table products(
  product_name varchar2(30) not null,
- product_id number unique,
+ product_id number primay key,
  manufacturer varchar2(30),
  quantity float,
  unit varchar2(25),
